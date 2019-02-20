@@ -26,7 +26,7 @@ class CashRegister
     #binding.pry
     if @discount > 0
       @discount = @discount/100.to_f
-      @total = (1 - @discount) * @total.to_i
+      @total = ((1 - @discount) * @total).to_i
       binding.pry
       puts "After the discount, the total comes to $#{@total}."
     else
